@@ -11,7 +11,15 @@ from django.shortcuts import get_object_or_404
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def reply_details(request, pk):
-    if request.method == 'GET':
-        replies = Reply.objects.filter(comment__id = pk)
-        serializer = ReplySerializer(replies, many=True)
-        return Response(serializer.data, status=status.HTTP_200_OK)
+    replies = Reply.objects.filter(comment__id = pk)
+    serializer = ReplySerializer(replies, many=True)
+    return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def create_reply(request):
+    serializer = ReplySerializer(data=request.data)
+    if serializer.is_valid(raise_exception=True):
+        serializer.save(user=request.user)
+        return Response(serializer.data)
