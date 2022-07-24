@@ -1,5 +1,6 @@
 // General Imports
 import { Routes, Route } from "react-router-dom";
+import useAuth from "./hooks/useAuth";
 import "./App.css";
 
 // Pages Imports
@@ -15,6 +16,7 @@ import Footer from "./components/Footer/Footer";
 import PrivateRoute from "./utils/PrivateRoute";
 
 function App() {
+  const [user, token] = useAuth();
   return (
     <div>
       <Navbar />

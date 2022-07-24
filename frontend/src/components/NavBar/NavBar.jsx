@@ -12,9 +12,11 @@ const Navbar = () => {
       <ul>
         <li className="brand">
           <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-            <b>React/Django JWT</b>
+          <h1>THE LAST OF US VIDEOS</h1>
           </Link>
         </li>
+        <li><input type="text" /> <button>SEARCH</button></li>
+        <li><button onClick={() => navigate("/")}>HOME</button></li>
         <li>
           {user ? (
             <button onClick={logoutUser}>Logout</button>
