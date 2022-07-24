@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 const HomePage = (props) => {
   return (
     <div className="container">
@@ -6,17 +7,19 @@ const HomePage = (props) => {
         if (video.snippet) {
           return (
             <span key={index * 2}>
-              <div>
-                <input
-                  type="image"
-                  src={video.snippet.thumbnails.default.url}
-                  alt="Video Thumbnail"
-                />
-              </div>
-              <div>
-                {" "}
-                <h3>{video.snippet.title}</h3>
-              </div>
+              <Link to={`/${video.id.videoId}/`}>
+                <div>
+                  <input
+                    type="image"
+                    src={video.snippet.thumbnails.medium.url}
+                    alt="Video Thumbnail"
+                  />
+                </div>
+                <div>
+                  {" "}
+                  <h4>{video.snippet.title}</h4>
+                </div>
+              </Link>
             </span>
           );
         } else

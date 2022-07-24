@@ -14,6 +14,7 @@ import Footer from "./components/Footer/Footer";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { KEY } from "./localKey";
+import VideoPage from "./pages/VideoPage";
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
         <Route path="/" element={<HomePage videos={videos} user={user} token={token} />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/:videoId/" element={<VideoPage/>} />
       </Routes>
       <Footer />
     </div>
