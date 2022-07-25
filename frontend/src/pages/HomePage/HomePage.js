@@ -7,7 +7,9 @@ const HomePage = (props) => {
         if (video.snippet) {
           return (
             <span key={index * 2}>
-              <Link to={`/${video.id.videoId}/`}>
+              <Link
+                to={`/${video.id.videoId}/${video.snippet.title}/${video.snippet.description}`}
+              >
                 <div>
                   <input
                     type="image"
