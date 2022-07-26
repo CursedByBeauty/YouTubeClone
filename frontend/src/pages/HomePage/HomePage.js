@@ -8,7 +8,7 @@ const HomePage = (props) => {
           return (
             <span key={index * 2}>
               <Link
-                to={`/${video.id.videoId}/${video.snippet.title}/${video.snippet.description}`}
+                to={`/${video.id.videoId}/`}
               >
                 <div>
                   <input

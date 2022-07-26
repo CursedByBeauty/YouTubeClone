@@ -34,12 +34,12 @@ function App() {
   }
   return (
     <div>
-      <Navbar />
+      <Navbar setVideos={setVideos} getAllVideos={getAllVideos} videos={videos} />
       <Routes>
         <Route path="/" element={<HomePage videos={videos} user={user} token={token} />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/:videoId/:title/:description" element={<VideoPage videos={videos} />} />
+        <Route path="/:videoId/" element={<VideoPage videos={videos} />} />
       </Routes>
       <Footer />
     </div>
