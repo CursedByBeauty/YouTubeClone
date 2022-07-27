@@ -19,6 +19,7 @@ const CommentForm = (props) => {
         },
       });
       setText("");
+      props.getAllComments();
     } catch (error) {
       alert("NEED TO LOGIN TO CREATE A COMMENT");
       console.log(error.message);

@@ -4,13 +4,22 @@ import { useParams } from "react-router-dom";
 import { KEY } from "../localKey";
 import CommentForm from "../components/Comments/CommentForm";
 import DisplayVideos from "../components/DisplayVideos/DisplayVideos";
+import DisplayComments from "../components/Comments/DisplayComments";
 const VideoPage = (props) => {
-  
   const { videoId } = useParams();
+  const [comments, setComments] = useState([]);
   const [relatedVideos, setRelatedVideos] = useState([]);
   useEffect(() => {
     getRelatedVideos(videoId);
   },[]);
+  async function getAllComments() {
+    try {
+      let response = await axios.get("http://127.0.0.1:8000/comments/");
+      setComments(response.data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
   async function getRelatedVideos(id) {
     try {
       let result = await axios.get(
@@ -36,7 +45,10 @@ const VideoPage = (props) => {
         ></iframe>
       </div>
       <div>
-        <CommentForm videoId={videoId}/>
+        <CommentForm getAllComments={getAllComments} videoId={videoId}/>
+      </div>
+      <div>
+        <DisplayComments getAllComments={getAllComments} comments={comments} videoId={videoId}/>
       </div>
       <div>
         <DisplayVideos videos={relatedVideos} />
