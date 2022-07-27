@@ -14,7 +14,7 @@ import Footer from "./components/Footer/Footer";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { KEY } from "./localKey";
-import VideoPage from "./components/VideoPage";
+import VideoPage from "./pages/VideoPage";
 
 
 function App() {

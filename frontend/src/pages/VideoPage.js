@@ -2,8 +2,10 @@ import axios from "axios";
 import React, { useEffect,useState } from "react";
 import { useParams } from "react-router-dom";
 import { KEY } from "../localKey";
-import DisplayVideos from "./DisplayVideos/DisplayVideos";
+import CommentForm from "../components/Comments/CommentForm";
+import DisplayVideos from "../components/DisplayVideos/DisplayVideos";
 const VideoPage = (props) => {
+  
   const { videoId } = useParams();
   const [relatedVideos, setRelatedVideos] = useState([]);
   useEffect(() => {
@@ -32,6 +34,9 @@ const VideoPage = (props) => {
           src={`https://www.youtube.com/embed/${videoId}?autoplay=1&origin=http://example.com`}
           frameBorder="0"
         ></iframe>
+      </div>
+      <div>
+        <CommentForm videoId={videoId}/>
       </div>
       <div>
         <DisplayVideos videos={relatedVideos} />
