@@ -1,14 +1,13 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
 const DisplayVideos = (props) => {
-    return ( <div>
-              {props.videos.map((video, index) => {
+  return (
+    <div>
+      {props.videos.map((video, index) => {
         if (video.snippet) {
           return (
             <span key={index * 2}>
-              <Link
-                to={`/${video.id.videoId}/`}
-              >
+              <Link to={`/${video.id.videoId}/`}>
                 <div>
                   <input
                     type="image"
@@ -32,7 +31,8 @@ const DisplayVideos = (props) => {
             </span>
           );
       })}
-    </div> );
-}
- 
+    </div>
+  );
+};
+
 export default DisplayVideos;

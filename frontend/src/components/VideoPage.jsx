@@ -8,7 +8,7 @@ const VideoPage = (props) => {
   const [relatedVideos, setRelatedVideos] = useState([]);
   useEffect(() => {
     getRelatedVideos(videoId);
-  }, []);
+  },[]);
   async function getRelatedVideos(id) {
     try {
       let result = await axios.get(
@@ -33,7 +33,6 @@ const VideoPage = (props) => {
           frameBorder="0"
         ></iframe>
       </div>
-      <div></div>
       <div>
         <DisplayVideos videos={relatedVideos} />
       </div>
