@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useEffect } from "react";
 import useAuth from "../../hooks/useAuth";
 import DisplayReplies from "../Replies/DisplayReplies";
@@ -8,6 +9,25 @@ const DisplayComments = (props) => {
     props.getAllComments();
   }, []);
 
+  async function likes(id){
+    try {
+        await axios.patch(`http://127.0.0.1:8000/comments/likes/${id}/`)
+        props.getAllComments()
+    } catch (error) {
+       console.log(error.message) 
+    }
+  }
+
+  async function dislikes(id){
+    try {
+        await axios.patch(`http://127.0.0.1:8000/comments/dislikes/${id}/`)
+        props.getAllComments()
+    } catch (error) {
+       console.log(error.message) 
+    }
+  }
+
+  
   return (
     <div>
       {props.comments
@@ -16,8 +36,8 @@ const DisplayComments = (props) => {
           return (
             <div key={item.id * 2}>
               <h4>{item.text}</h4>
-              <button>Likes: {item.likes}</button>
-              <button>DisLikes: {item.dislikes}</button>
+              <button onClick={()=>likes(item.id)}>Likes: {item.likes}</button>
+              <button onClick={()=>dislikes(item.id)}>DisLikes: {item.dislikes}</button>
               <DisplayReplies user={user} token={token} commentId={item.id} />
             </div>
           );
