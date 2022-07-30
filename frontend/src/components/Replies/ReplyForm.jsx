@@ -2,11 +2,11 @@ import React, { useState } from "react";
 const ReplyForm = (props) => {
   const [replyText, setReplyText] = useState('');
 
-  function handleAdd(description) {
+  function handleAdd() {
     let newReply = {
       user_id: props.user.id,
       comment_id: props.commentId,
-      text: description,
+      text: replyText,
     };
     props.createReply(newReply);
     setReplyText('')
@@ -18,7 +18,7 @@ const ReplyForm = (props) => {
         type="text"
         onChange={(event) => setReplyText(event.target.value)}
       />
-      <button onClick={() => handleAdd(replyText)}>ADD</button>
+      <button onClick={() => handleAdd()}>ADD</button>
     </div>
   );
 };
