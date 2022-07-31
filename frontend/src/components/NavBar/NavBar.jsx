@@ -38,6 +38,7 @@ const Navbar = (props) => {
         </li>
         <li>
           <input
+          placeholder="  Search Here..."
           className="input-bar"
             value={search}
             type="text"
@@ -45,14 +46,13 @@ const Navbar = (props) => {
           />{" "}
           <button onClick={()=> handleSearch()}>SEARCH</button>
         </li>
+
         <li>
           <button onClick={() => navigate("/")}>HOME</button>
-        </li>
-        <li>
           {user ? (
-            <button onClick={logoutUser}>Logout</button>
+            <button onClick={logoutUser}>LOGOUT</button>
           ) : (
-            <button onClick={() => navigate("/login")}>Login</button>
+            <button onClick={() => navigate("/login")}>LOGIN</button>
           )}
         </li>
       </ul>
