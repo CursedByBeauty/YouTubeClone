@@ -45,3 +45,28 @@ button:hover {
   color:white;
   font-family: 'Gothic'
 }
+
+.grid-box {
+  display:grid;
+  grid-template-areas: 
+  'tl tml tmr tr'
+  'bl bml bmr br';
+  padding-bottom: 10rem
+}
+
+.grid-box div.card {
+  margin: 1rem 1rem;
+  border-radius:0;
+  background-color: transparent;
+  border-radius: 0;
+  border-color: white;
+}
+.grid-box div.card div.grid-item input.card-img-top {
+  height: 12rem;
+  border: solid white;
+  border-radius:0
+}
+.grid-item a {
+  text-decoration: none;
+  color:white
+}
