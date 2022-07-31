@@ -5,6 +5,7 @@ import { KEY } from "../localKey";
 import CommentForm from "../components/Comments/CommentForm";
 import DisplayVideos from "../components/DisplayVideos/DisplayVideos";
 import DisplayComments from "../components/Comments/DisplayComments";
+import "../App.css"
 const VideoPage = (props) => {
   const { videoId } = useParams();
   const [comments, setComments] = useState([]);
@@ -32,16 +33,16 @@ const VideoPage = (props) => {
   }
 
   return (
-    <div>
-      <div>
+    <div className="around-video-page">
+      <div className="around-video">
         <iframe
+        
           id="ytplayer"
           type="text/html"
           title="myVideo"
           width="640"
           height="360"
           src={`https://www.youtube.com/embed/${videoId}?autoplay=1&origin=http://example.com`}
-          frameBorder="0"
         ></iframe>
       </div>
       <div>

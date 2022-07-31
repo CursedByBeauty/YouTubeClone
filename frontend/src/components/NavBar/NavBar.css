@@ -1,4 +1,4 @@
-ol, ul {
+ul {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
@@ -28,7 +28,7 @@ li {
 
 .navBar button:hover {
   background: white;
-  color: steelblue;
+  color: black;
   cursor: pointer;
 }
 
@@ -41,6 +41,5 @@ li {
   background-color: transparent;
   box-shadow: 2px 2px 6px white;
   height:3rem;
-  width:27rem;
   border-style: solid;
 }

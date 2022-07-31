@@ -1,4 +1,3 @@
-
 *,
 *::before,
 *::after {
@@ -9,8 +8,8 @@
 
 html {
   /* box-sizing: border-box; */
-  font-family: 'Gothic';
-  background-color:#3A3636;
+  font-family: "Gothic";
+  background-color: #3a3636;
 }
 
 p {
@@ -18,19 +17,19 @@ p {
 }
 
 button {
-  background-color: transparent;
-  border: 2px solid steelblue;
-  color: steelblue;
-  font-size: 1rem;
-  font-family: inherit;
-  max-width: 100px;
-  padding: 0.5rem 0.5rem;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 0.4rem 0.5rem;
+  width: 9rem;
+  box-shadow: 2px 2px 6px white;
+  height: 3rem;
 }
 
 button:hover {
   cursor: pointer;
-  color: white;
-  background-color: steelblue;
+  background: white;
+  color: black;
 }
 
 .container {
@@ -40,24 +39,23 @@ button:hover {
   text-align: center;
 }
 
-
 .app {
-  background-color:#3A3636;
-  color:white;
-  font-family: 'Gothic'
+  background-color: #3a3636;
+  color: white;
+  font-family: "Gothic";
 }
 
 .grid-box {
-  display:grid;
-  grid-template-areas: 
-  'tl tml tmr tr'
-  'bl bml bmr br';
-  padding-bottom: 10rem
+  display: grid;
+  grid-template-areas:
+    "tl tml tmr tr"
+    "bl bml bmr br";
+  padding-bottom: 10rem;
 }
 
 .grid-box div.card {
   margin: 1rem 1rem;
-  border-radius:0;
+  border-radius: 0;
   background-color: transparent;
   border-radius: 0;
   border-color: white;
@@ -65,15 +63,20 @@ button:hover {
 .grid-box div.card div.grid-item input.card-img-top {
   height: 12rem;
   border: solid white;
-  border-radius:0
+  border-radius: 0;
 }
 .grid-item a {
   text-decoration: none;
-  color:white
+  color: white;
 }
 
-
-#ytplayer iframe {
-  padding-left: 2rem;
-  border:solid white
+.around-video  {
+  border: solid white;
+  width: 40.2rem;
+}
+div iframe {
+  box-shadow: 2px 2px 6px white;
+}
+.around-video-page {
+  padding-left:2rem
 }

@@ -30,9 +30,9 @@ const Navbar = (props) => {
   const navigate = useNavigate();
   return (
     <div className="navBar">
-      <ul>
+      <ul style={{paddingLeft: 0}}>
         <li className="brand">
-          <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+          <Link to="/" style={{textDecoration: 'none', color: 'white'}}>
             <h1>THE LAST OF US VIDEOS</h1>
           </Link>
         </li>

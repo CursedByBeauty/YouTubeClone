@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import useAuth from "../../hooks/useAuth";
+import "../../App.css"
 const CommentForm = (props) => {
   const [user, token] = useAuth();
   const [text, setText] = useState("");
@@ -26,8 +27,9 @@ const CommentForm = (props) => {
     }
   };
   return (
-    <div>
+    <div className="around-comment-form">
       <input
+      className="input-bar"
         value={text}
         type="text"
         onChange={(event) => setText(event.target.value)}
