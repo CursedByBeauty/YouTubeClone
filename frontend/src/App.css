@@ -1,3 +1,4 @@
+
 *,
 *::before,
 *::after {
@@ -8,7 +9,6 @@
 
 html {
   /* box-sizing: border-box; */
-  font-family: "Gothic";
   background-color: #3a3636;
 }
 
@@ -70,7 +70,7 @@ button:hover {
   color: white;
 }
 
-.around-video  {
+.around-video {
   border: solid white;
   width: 40.2rem;
 }
@@ -78,5 +78,5 @@ div iframe {
   box-shadow: 2px 2px 6px white;
 }
 .around-video-page {
-  padding-left:2rem
+  padding-left: 2rem;
 }
