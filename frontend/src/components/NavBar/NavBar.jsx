@@ -38,6 +38,7 @@ const Navbar = (props) => {
         </li>
         <li>
           <input
+          className="input-bar"
             value={search}
             type="text"
             onChange={(event) => setSearch(event.target.value)}

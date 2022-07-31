@@ -10,7 +10,7 @@
 
 html {
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Gothic'
 }
 
 p {
@@ -55,4 +55,10 @@ button:hover {
   margin: 5px;
   padding: 3px 7px;
   font-size: 17px;
+}
+
+.app {
+  background-color:#3A3636;
+  color:white;
+  font-family: 'Gothic'
 }

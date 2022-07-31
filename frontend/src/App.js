@@ -33,7 +33,7 @@ function App() {
     }
   }
   return (
-    <div>
+    <div className="app">
       <Navbar setVideos={setVideos} getAllVideos={getAllVideos} videos={videos} />
       <Routes>
         <Route path="/" element={<HomePage videos={videos} user={user} token={token} />} />

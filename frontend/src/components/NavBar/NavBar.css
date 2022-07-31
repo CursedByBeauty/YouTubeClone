@@ -2,6 +2,7 @@ ul {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
+  align-items: center;
 }
 
 li {
@@ -9,8 +10,6 @@ li {
 }
 
 .navBar {
-  background: steelblue;
-  box-shadow: 4px 2px 5px gray;
   color: white;
   margin-bottom: 2rem;
   padding: 1.5rem 2rem;
@@ -18,9 +17,12 @@ li {
 
 .navBar button {
   background: transparent;
-  border: 2px solid white;
+  border: 1px solid white;
   color: white;
   padding: 0.4rem 0.5rem;
+  width: 9rem;
+  box-shadow: 2px 2px 6px white;
+  height:3rem
 }
 
 .navBar button:hover {
@@ -32,4 +34,10 @@ li {
 .brand {
   cursor: pointer;
   font-size: 2rem;
+}
+
+.input-bar {
+  background-color: transparent;
+  box-shadow: 2px 2px 6px white;
+  height:3rem;
 }
