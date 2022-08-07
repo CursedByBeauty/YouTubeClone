@@ -52,6 +52,11 @@ button:hover {
     "bl bml bmr br";
   padding-bottom: 10rem;
 }
+div.related-container div.grid-box {
+  grid-template-areas: 
+  "l r"
+  "ll lr"
+}
 
 .grid-box div.card {
   margin: 1rem 1rem;
@@ -70,12 +75,9 @@ button:hover {
   color: white;
 }
 
-.around-video {
-  border: solid white;
-  width: 40.2rem;
-}
 div iframe {
   box-shadow: 2px 2px 6px white;
+  border: solid white
 }
 .around-video-page {
   padding-left: 2rem;

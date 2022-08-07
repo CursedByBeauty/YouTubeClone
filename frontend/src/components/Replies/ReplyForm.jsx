@@ -14,6 +14,7 @@ const ReplyForm = (props) => {
   return (
     <div>
       <input
+      className="input-bar"
         value={replyText}
         type="text"
         onChange={(event) => setReplyText(event.target.value)}
