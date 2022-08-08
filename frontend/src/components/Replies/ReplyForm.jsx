@@ -12,9 +12,10 @@ const ReplyForm = (props) => {
     setReplyText('')
   }
   return (
-    <div>
+    <div className="around-reply-form">
       <input
       className="input-bar"
+      placeholder="  ADD A REPLY TO THE COMMENT HERE..."
         value={replyText}
         type="text"
         onChange={(event) => setReplyText(event.target.value)}

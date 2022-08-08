@@ -30,6 +30,7 @@ const CommentForm = (props) => {
     <div className="around-comment-form">
       <input
       className="input-bar"
+      placeholder= "  ADD A NEW COMMENT HERE..."
         value={text}
         type="text"
         onChange={(event) => setText(event.target.value)}

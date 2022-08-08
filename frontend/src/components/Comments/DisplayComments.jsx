@@ -35,9 +35,13 @@ const DisplayComments = (props) => {
         .map((item) => {
           return (
             <div key={item.id * 2}>
+              <div className="comment-content">
               <h4>{item.text}</h4>
+              <div>
               <button onClick={()=>likes(item.id)}>Likes: {item.likes}</button>
               <button onClick={()=>dislikes(item.id)}>DisLikes: {item.dislikes}</button>
+              </div>
+              </div>
               <DisplayReplies user={user} token={token} commentId={item.id} />
             </div>
           );
