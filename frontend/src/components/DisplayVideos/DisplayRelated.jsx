@@ -8,8 +8,8 @@ const DisplayRelated = (props) => {
         {props.videos.map((video, index) => {
           if (video.snippet) {
             return (
-              <div className="card">
-                <div key={index * 3} className="grid-item">
+              <div key={index * 3} className="card">
+                <div  className="grid-item">
                   <Link to={`/${video.id.videoId}/`}>
                     <div>
                       <input
@@ -29,7 +29,7 @@ const DisplayRelated = (props) => {
             );
           } else
             return (
-              <span key={index * 3} className="grid-item">
+              <span key={index * 5} className="grid-item">
                 <div>
                   <h6>Loading...</h6>
                 </div>

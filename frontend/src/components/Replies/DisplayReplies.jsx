@@ -33,12 +33,15 @@ const DisplayReplies = (props) => {
   }
   return (
     <div>
-      <div>
+      <div className="around-replies">
         {replies.map((reply) => {
           if (replies !== []) {
             return (
+              <div>
               <div key={reply.id * 4}>
                 <p>{reply.text}</p>
+              </div>
+              <hr/>
               </div>
             );
           }
